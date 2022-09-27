@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Headless New</title>
+    <link rel="stylesheet" href="dist/css/styles.css"/>
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="dist/js/scripts.min.js" defer></script>
+</head>
+<body>
+<main id="flex-page-detail">
+
+    <div class="grid-row"
+         :class="[row.rowGap]"
+         v-for="(row, index) in rows">
+
+        <template v-if="row.handle === 'row'">
+
+            <div class="grid"
+                 :class="[
+                     row.rowLayout,
+                     row.gridGap,
+                     row.rowWidth
+                     ]"
+                >
+                <template v-for="(block, index) in row.blocks">
+
+                    <template v-if="block.handle === 'imageBlock'">
+                        <figure>
+                            <img :src="block.imageSrc" :alt="block.alt">
+                        </figure>
+                    </template>
+
+                    <template v-if="block.handle === 'textBlock'">
+                        <div v-html='block.text'></div>
+                    </template>
+
+                </template>
+
+            </div>
+
+        </template>
+
+        <template v-if="row.handle === 'channelRow'">
+            <div class="grid">
+
+            </div>
+        </template>
+
+    </div>
+
+</main>
+</body>
+</html>

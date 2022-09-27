@@ -1,0 +1,32 @@
+// FONT SIZES
+// This is a Major Third scale that powers all the utilities that it is
+// relevant for FONT SIZES All items are calculated off the base size,
+// so change that and cascade across your whole project.
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+:root{
+  --font-ratio: 1.2; // Adjust all other values
+  --f0: 1rem;
+  --f1: calc(var(--f0) * var(--font-ratio));
+  --f2: calc(var(--f1) * var(--font-ratio));
+  --f3: calc(var(--f2) * var(--font-ratio));
+  --f4: calc(var(--f3) * var(--font-ratio));
+  --f5: calc(var(--f4) * var(--font-ratio));
+  --f6: calc(var(--f5) * var(--font-ratio));
+  --f7: calc(var(--f6) * var(--font-ratio));
+  --f8: calc(var(--f7) * var(--font-ratio)); // Largest Value
+  --f9: calc(var(--f8) * var(--font-ratio));
+  --f10: calc(var(--f9) * var(--font-ratio));
+  --f11: calc(var(--f10) * var(--font-ratio));
+  --f12: calc(var(--f11) * var(--font-ratio));
+  --f13: calc(var(--f12) * var(--font-ratio));
+  --f14: calc(var(--f13) * var(--font-ratio));
+  --heading-font: 'Lato', sans-serif;
+  --body-font: 'Lato', sans-serif;
+  --heading-weight: 700;
+  --body-weight: 300;
+  --link-weight: 500;
+  --body-line-height: 1.2;
+  --heading-line-height: 1.3;
+  --max-character-length: 75ch;
+}
